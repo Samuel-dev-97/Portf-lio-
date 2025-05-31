@@ -1,9 +1,5 @@
 Portfólio de Samuel Souza
 
-Este projeto consiste em um portfólio pessoal de página única (single-page application), meticulosamente desenvolvido por Samuel Souza. Samuel é um estudante dedicado do curso de Análise e Desenvolvimento de Sistemas na renomada Fatec - Faculdade de Tecnologia de Franca Dr. Thomaz Novelino. O site foi concebido para servir como uma vitrine digital, apresentando de forma organizada e atraente as informações profissionais e acadêmicas de Samuel. Nele, os visitantes podem encontrar detalhes sobre sua trajetória, explorar uma seção dedicada aos seus projetos de estudo, denominados "Exercícios Fatec", obter suas informações de contato e até mesmo utilizar um formulário interativo destinado a propostas de contratação.
-
-O design do portfólio foi cuidadosamente elaborado para ser moderno e interativo, proporcionando uma experiência de usuário envolvente. A navegação entre as diferentes seções do site é fluida, empregando efeitos de transição suaves que guiam o usuário pelo conteúdo. Além disso, o layout é totalmente responsivo, garantindo uma visualização ótima e funcional em uma ampla gama de dispositivos, desde desktops a smartphones.
-
 Tecnologias Utilizadas
 
 A construção do front-end deste portfólio emprega tecnologias web modernas e consolidadas. A estrutura fundamental da página é definida utilizando HTML5 semântico, garantindo acessibilidade e boa organização do conteúdo. A estilização visual é realizada com CSS3, potencializada pelo uso do pré-processador Sass (conforme indicado pela presença do arquivo main.sass), que permite uma escrita de CSS mais modular, organizada e eficiente. O arquivo main.css resultante contém todos os estilos compilados aplicados à aplicação.
