@@ -1,4 +1,3 @@
-Portfólio de Samuel Souza
 
 Tecnologias Utilizadas
 
