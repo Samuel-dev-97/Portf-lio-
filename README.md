@@ -2,7 +2,7 @@ Portfólio de Samuel Souza
 
 Tecnologias Utilizadas
 
-A construção do front-end deste portfólio emprega tecnologias web modernas e consolidadas. A estrutura fundamental da página é definida utilizando HTML5 semântico, garantindo acessibilidade e boa organização do conteúdo. A estilização visual é realizada com CSS3, potencializada pelo uso do pré-processador Sass (conforme indicado pela presença do arquivo main.sass), que permite uma escrita de CSS mais modular, organizada e eficiente. O arquivo main.css resultante contém todos os estilos compilados aplicados à aplicação.
+A construção do front-end deste portfólio emprega tecnologias web modernas e consolidadas. A estrutura fundamental da página é definida utilizando HTML5 semântico, garantindo acessibilidade e boa organização do conteúdo. A estilização visual é realizada com CSS3, potencializada pelo uso do pré-processador Sass, que permite uma escrita de CSS mais modular, organizada e eficiente. O arquivo main.css resultante contém todos os estilos compilados aplicados à aplicação.
 
 A interatividade rica da página, que inclui a navegação dinâmica entre as seções, o funcionamento do slider de projetos e diversas animações, é implementada com JavaScript. Para facilitar a manipulação do DOM e o gerenciamento de eventos, a biblioteca jQuery é utilizada, como evidenciado nos arquivos functions.js (código fonte) e functions-min.js (versão minificada para produção). Adicionalmente, a biblioteca Hammer.js foi incorporada para oferecer suporte a gestos de toque (swipe) em dispositivos móveis, aprimorando a usabilidade em telas sensíveis ao toque. A biblioteca Font Awesome é utilizada para a inclusão de ícones vetoriais, enriquecendo a interface visual.
 
@@ -36,10 +36,10 @@ Funcionalidades Principais
 O portfólio oferece diversas funcionalidades para proporcionar uma experiência completa ao visitante:
 
 •
-Navegação Fluida: A transição entre as seções (Home, Exercícios, Sobre mim, Contato, Contrate-me) é realizada de forma suave, podendo ser acionada pelo menu lateral, pelo menu principal (acessível pelo ícone de hambúrguer) ou através de scroll do mouse e gestos de swipe em dispositivos móveis.
+Navegação Fluida: A transição entre as seções (Home, Exercícios, Sobre mim, Contato, Contrate-me) é realizada de forma suave, podendo ser acionada pelo menu lateral, pelo menu principal ou através de scroll do mouse e gestos de swipe em dispositivos móveis.
 
 •
-Slider de Projetos: Na seção "Exercícios", um slider interativo permite visualizar diferentes projetos desenvolvidos por Samuel, com imagens, títulos e descrições.
+Slider de Projetos: Na seção "Exercícios", um slider interativo permite visualizar diferentes projetos desenvolvidos por mim, com imagens, títulos e descrições.
 
 •
 Design Responsivo: O layout adapta-se elegantemente a diferentes resoluções de tela. Uma notificação específica é exibida em viewports menores ou em orientação paisagem em smartphones, sugerindo a visualização em modo retrato para uma melhor experiência.
@@ -48,7 +48,7 @@ Design Responsivo: O layout adapta-se elegantemente a diferentes resoluções de
 Animações e Efeitos: Efeitos de transição e animações sutis são aplicados a diversos elementos da interface, tornando a interação mais dinâmica e agradável.
 
 •
-Informações de Contato: Uma seção dedicada apresenta claramente as informações de contato de Samuel, incluindo links diretos para seu Github, LinkedIn e WhatsApp.
+Informações de Contato: links diretos para: Github, LinkedIn e WhatsApp.
 
 •
 Formulário de Contratação: A seção "Contrate-me" inclui um formulário (atualmente um placeholder visual) que permite aos visitantes selecionar o tipo de serviço desejado (Estagiário, Desenvolvedor Júnior Front-end, Desenvolvedor Júnior Back-end) e enviar uma solicitação. Para funcionalidade completa, este formulário necessitaria de integração com um serviço de backend ou uma plataforma como Formspree.
