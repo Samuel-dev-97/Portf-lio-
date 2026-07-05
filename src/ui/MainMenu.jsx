@@ -3,6 +3,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 
 export default function BasicMenu() {
   const id = React.useId();
@@ -19,18 +20,19 @@ export default function BasicMenu() {
 
   return (
     <div>
-             <IconButton
-      id="basic-button"
-      aria-controls={open ? 'basic-menu' : undefined}
-      aria-haspopup="true"
-      aria-expanded={open ? 'true' : undefined}
-      onClick={handleClick}
-      edge="start"
-      color="inherit"
-      aria-label="menu" sx={{ mr: 2 }}
-    >
-      <MenuIcon />
-    </IconButton>
+      <IconButton
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+        edge="start"
+        color="inherit"
+        aria-label="menu"
+        sx={{ mr: 2 }}
+      >
+        <MenuIcon />
+      </IconButton>
       <Menu
         id={menuId}
         anchorEl={anchorEl}
@@ -42,9 +44,18 @@ export default function BasicMenu() {
           },
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem component={Link} to="/" onClick={handleClose}>
+          Página Inicial
+        </MenuItem>
+        <MenuItem component={Link} to="/projetos" onClick={handleClose}>
+          Projetos
+        </MenuItem>
+        <MenuItem component={Link} to="/certificados" onClick={handleClose}>
+          Certificados
+        </MenuItem>
+        <MenuItem component={Link} to="/contato" onClick={handleClose}>
+          Contato
+        </MenuItem>
       </Menu>
     </div>
   );

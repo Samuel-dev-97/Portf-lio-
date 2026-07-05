@@ -2,7 +2,7 @@
 import React from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-
+import CodeIcon from '@mui/icons-material/Code';
 
 export default function FooterBar() {
 return <>
@@ -20,12 +20,13 @@ return <>
         <Typography variant="caption"
         sx={{
          '& a': {   
-           color: 'secondary.main'
+           color: '#effa0d',
          }
        }}
 >
-       Desenvolvido e mantido por <a href="mailto:">Samuelpssouza@gmail.com</a>
+       Desenvolvido e mantido  por <a href="mailto:samuelpssouza@gmail.com">Samuel Dev</a> <CodeIcon sx={{ verticalAlign: 'text-bottom', fontSize: 'inherit' }} />
      </Typography>
+
 
     </Box>
   </>
