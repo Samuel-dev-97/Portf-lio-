@@ -1,22 +1,47 @@
-import * as React from 'react';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import IconButton from '@mui/material/IconButton'
+import MenuIcon from '@mui/icons-material/Menu'
+import { Link } from 'react-router-dom'
+import { useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import Button from '@mui/material/Button'
+import Stack from '@mui/material/Stack'
 
-export default function BasicMenu() {
-  const id = React.useId();
-  const buttonId = `${id}-button`;
-  const menuId = `${id}-menu`;
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+const MENU_ITEMS = [
+  { label: 'Página Inicial', to: '/' },
+  { label: 'Projetos', to: '/projetos' },
+  { label: 'Certificados', to: '/certificados' },
+  { label: 'Contato', to: '/contato' },
+]
+
+export default function MainMenu() {
+  const theme = useTheme()
+  const isDesktop = useMediaQuery(theme.breakpoints.up('md'))
+
+  const [anchorEl, setAnchorEl] = React.useState(null)
+  const open = Boolean(anchorEl)
+  const handleClick = (event) => setAnchorEl(event.currentTarget)
+  const handleClose = () => setAnchorEl(null)
+
+  if (isDesktop) {
+    return (
+      <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+        {MENU_ITEMS.map((item) => (
+          <Button
+            key={item.to}
+            component={Link}
+            to={item.to}
+            color="inherit"
+            sx={{ textTransform: 'none' }}
+          >
+            {item.label}
+          </Button>
+        ))}
+      </Stack>
+    )
+  }
 
   return (
     <div>
@@ -29,34 +54,22 @@ export default function BasicMenu() {
         edge="start"
         color="inherit"
         aria-label="menu"
-        sx={{ mr: 2 }}
+        sx={{ mr: 1 }}
       >
         <MenuIcon />
       </IconButton>
       <Menu
-        id={menuId}
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        slotProps={{
-          list: {
-            'aria-labelledby': buttonId,
-          },
-        }}
+        slotProps={{ list: { 'aria-labelledby': 'basic-button' } }}
       >
-        <MenuItem component={Link} to="/" onClick={handleClose}>
-          Página Inicial
-        </MenuItem>
-        <MenuItem component={Link} to="/projetos" onClick={handleClose}>
-          Projetos
-        </MenuItem>
-        <MenuItem component={Link} to="/certificados" onClick={handleClose}>
-          Certificados
-        </MenuItem>
-        <MenuItem component={Link} to="/contato" onClick={handleClose}>
-          Contato
-        </MenuItem>
+        {MENU_ITEMS.map((item) => (
+          <MenuItem key={item.to} component={Link} to={item.to} onClick={handleClose}>
+            {item.label}
+          </MenuItem>
+        ))}
       </Menu>
     </div>
-  );
+  )
 }
