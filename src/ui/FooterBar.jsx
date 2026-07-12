@@ -20,7 +20,7 @@ return <>
         <Typography variant="caption"
         sx={{
          '& a': {   
-           color: '#effa0d',
+           color: '#e12e6c',
          }
        }}
 >
