@@ -1,8 +1,8 @@
 
-import React from 'react'
 import '@fontsource/space-grotesk/700.css'
 import { Box, Button, Chip, GlobalStyles, Stack, Typography } from '@mui/material'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
+import profileImage from '../assets/git.jpeg'
 
 const globalStyles = `
   @keyframes floatCard {
@@ -67,7 +67,7 @@ export default function Homepage() {
                 fontWeight: 700,
               }}
             >
-              Olá, eu sou Samuel
+              Olá, sou o Samuel
             </Typography>
             <Typography variant="h5" sx={{ color: 'rgba(255, 255, 255, 0.78)', maxWidth: '640px' }}>
               Estudante de ADS na FATEC Franca.
@@ -91,7 +91,6 @@ export default function Homepage() {
               <Chip label="Back-end" size="small" />
               <Chip label="Cybersecurity" size="small" />
               <Chip label="Front-end" size="small" />
-              <Chip label="Linux / Pop!_OS" size="small" />
             </Stack>
 
             <Button
@@ -146,7 +145,21 @@ export default function Homepage() {
                   right: '-40px',
                 }}
               />
-              <Typography variant="h6" sx={{ mt: '80px', fontWeight: 700, letterSpacing: '-0.03em' }}>
+              <Box
+                component="img"
+                src={profileImage}
+                alt="Imagem de perfil"
+                sx={{
+                  width: '100%',
+                  maxWidth: '100px',
+                  borderRadius: '24px',
+                  objectFit: 'cover',
+                  display: 'block',
+                  mx: 'auto',
+                  mb: 3,
+                }}
+              />
+              <Typography variant="h6" sx={{ fontWeight: 700, letterSpacing: '-0.03em' }}>
                 Cybersecurity & Code
               </Typography>
               <Typography variant="body2" sx={{ mt: 1.75, color: 'rgba(255, 255, 255, 0.72)', lineHeight: 1.75 }}>
@@ -206,7 +219,7 @@ export default function Homepage() {
             }}
           >
             <Typography variant="h3" sx={{ mb: '18px', color: '#fff' }}>
-              Estudo e Prática
+              Estudos e Práticas
             </Typography>
             <Typography sx={{ color: 'rgba(255, 255, 255, 0.72)', lineHeight: 1.78 }}>
               Atualmente estudo Java, Python e JavaScript, com foco em React no front-end e HTML/CSS na

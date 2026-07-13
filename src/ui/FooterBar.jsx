@@ -1,5 +1,4 @@
 
-import React from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import CodeIcon from '@mui/icons-material/Code';
@@ -14,7 +13,7 @@ return <>
       justifyContent: 'center',
       position: 'fixed',   
       bottom: 0,           
-      width: '100vw'
+      width: '100%'
     }}
     >
         <Typography variant="caption"
