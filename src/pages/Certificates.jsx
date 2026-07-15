@@ -8,7 +8,7 @@ export default function Certificates() {
         Certificados
       </Typography>
       <Typography>
-        Mostre seus certificados mais importantes e as instituições responsáveis.
+       certificados 
       </Typography>
     </Container>
   )
