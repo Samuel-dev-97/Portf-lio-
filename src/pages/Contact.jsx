@@ -55,7 +55,7 @@ export default function Contact() {
             <Button
               href={whatsappLink}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               variant="contained"
               color="secondary"
               startIcon={<WhatsAppIcon />}
@@ -76,7 +76,7 @@ export default function Contact() {
                 key={item.label}
                 href={item.href}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 variant="outlined"
                 startIcon={item.icon}
                 sx={{ color: '#fff', borderColor: 'rgba(255,255,255,0.24)', px: 2.2, py: 1, justifyContent: 'flex-start', minWidth: { xs: '100%', sm: 'auto' } }}

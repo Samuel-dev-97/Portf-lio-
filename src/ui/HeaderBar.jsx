@@ -11,19 +11,15 @@ export default function HeaderBar() {
       <AppBar position="static" sx={{ bgcolor: '#0d0d0f' }}>
         <Toolbar
           variant="dense"
-          sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+          sx={{ display: 'flex', alignItems: 'center', gap: 2 }}
         >
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, minWidth: 160 }}>
-            <Box component={Link} to="/" aria-label="home">
-              <img src={logotipo} style={{ height: 100, display: 'block' }} alt="logo" />
-            </Box>
+          <Box component={Link} to="/" aria-label="home">
+            <img src={logotipo} style={{ height: 100, display: 'block' }} alt="logo" />
           </Box>
 
-          <Box sx={{ display: 'flex', justifyContent: 'center', flex: 1 }}>
-            <MainMenu />
-          </Box>
-
-          <Box sx={{ minWidth: 160 }} />
+              <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+                <MainMenu />
+              </Box>
         </Toolbar>
       </AppBar>
     </Box>

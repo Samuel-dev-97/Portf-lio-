@@ -1,6 +1,7 @@
 
 import '@fontsource/space-grotesk/700.css'
 import { Box, Button, Chip, GlobalStyles, Stack, Typography } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 import profileImage from '../assets/git.jpeg'
 
@@ -26,6 +27,7 @@ const globalStyles = `
 `
 
 export default function Homepage() {
+  const navigate = useNavigate()
   return (
     <>
       <GlobalStyles styles={globalStyles} />
@@ -94,7 +96,7 @@ export default function Homepage() {
             </Stack>
 
             <Button
-              href="#about"
+              onClick={() => navigate('/projetos')}
               variant="contained"
               color="secondary"
               endIcon={<ArrowRightAltIcon />}
@@ -167,15 +169,7 @@ export default function Homepage() {
                 redes, sistemas operacionais e segurança.
               </Typography>
               <Stack direction="row" spacing={1.5} flexWrap="wrap" useFlexGap sx={{ mt: 3.5 }}>
-                <Box sx={{ px: 1.75, py: 1.25, borderRadius: 999, background: 'rgba(255,255,255,0.08)', color: '#fff', fontSize: '0.95rem' }}>
-                  React
-                </Box>
-                <Box sx={{ px: 1.75, py: 1.25, borderRadius: 999, background: 'rgba(255,255,255,0.08)', color: '#fff', fontSize: '0.95rem' }}>
-                  APIs
-                </Box>
-                <Box sx={{ px: 1.75, py: 1.25, borderRadius: 999, background: 'rgba(255,255,255,0.08)', color: '#fff', fontSize: '0.95rem' }}>
-                  Redes
-                </Box>
+                
               </Stack>
             </Box>
           </Box>
