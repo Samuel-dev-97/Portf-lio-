@@ -194,7 +194,7 @@ export default function Homepage() {
               Foco prático
             </Typography>
             <Typography sx={{ color: 'rgba(255, 255, 255, 0.72)', lineHeight: 1.78 }}>
-              Busco oportunidades para aplicar conhecimento em projetos reais com ênfase em desenvolvimento back-end.
+             Desenvolvedor back-end com foco na criação e manutenção de aplicações, utilizando boas práticas de programação, organização de código e aprendizado contínuo.
             </Typography>
           </Box>
 
