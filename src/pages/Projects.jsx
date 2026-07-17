@@ -13,7 +13,7 @@ import videoDemo from '../assets/bI.mp4'
 const projects = [
   {
     id: 'analise-dados',
-    category: 'Projeto em destaque',
+    category: 'DASHBOARD BI',
     title: 'Análise de dados',
     summary: 'Painel desenvolvido no Power BI com dados do Kaggle e visual criado no Figma.',
     description:
@@ -23,12 +23,23 @@ const projects = [
     video: videoDemo,
   },
   {
-    id: 'proximos-projetos',
-    category: 'Em breve',
-    title: 'Próximos projetos',
-    summary: 'Novos projetos serão adicionados aqui à medida que forem acontecendo.',
+    id: 'portfolio-pessoal',
+    category: 'Projeto pessoal',
+    title: 'Portfólio pessoal',
+    summary: 'Site desenvolvido para apresentar minha trajetória e projetos da faculdade.',
     description:
-      'Esta seção já está preparada para receber meu próximo projeto.',
+      'Portfólio criado com React, Vite, MUI e React Router, com páginas para apresentação, projetos, certificados e contato.',
+    highlights: ['Navegação entre páginas', 'Layout responsivo', 'Estrutura organizada para apresentação pessoal'],
+    tools: ['React', 'Vite', 'MUI', 'React Router'],
+    video: null,
+  },
+  {
+    id: 'proximo-projeto',
+    category: 'Em breve',
+    title: 'Próximo projeto',
+    summary: 'próximo projeto que será adicionado futuramente.',
+    description:
+      'Aguardando a inclusão de um novo trabalho ou estudo prático.',
     highlights: [],
     tools: ['Em breve'],
     video: null,
@@ -47,8 +58,8 @@ export default function Projects() {
       <Typography variant="h3" component="h1" gutterBottom>
         Projetos
       </Typography>
-      <Typography variant="body1" color="text.secondary" sx={{ mb: 4, maxWidth: 700, mx: 'auto' }}>
-        Meus trabalhos academicos e projetos pessoais. 
+      <Typography variant="body1" color="text.secondary" sx={{ mb: 4, maxWidth: 700 }}>
+        Meus trabalhos acadêmicos e projetos pessoais. 
       </Typography>
 
       <Stack spacing={2}>
@@ -138,6 +149,19 @@ export default function Projects() {
                         }}
                       />
                     </>
+                  ) : project.id === 'portfolio-pessoal' ? (
+                    <Typography color="text.secondary">
+                      Você pode ver mais detalhes no repositório do projeto:{' '}
+                      <Box
+                        component="a"
+                        href="https://github.com/Samuel-dev-97/Portf-lio-"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        sx={{ color: 'primary.main', fontWeight: 600, textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}
+                      >
+                        github.com/Samuel-dev-97/Portf-lio-
+                      </Box>
+                    </Typography>
                   ) : (
                     <Typography color="text.secondary">
                       Este projeto ainda será detalhado em breve.

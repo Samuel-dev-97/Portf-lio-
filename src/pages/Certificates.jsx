@@ -37,7 +37,7 @@ export default function Certificates() {
       </Typography>
 
       <Typography color="text.secondary" sx={{ mb: 4, maxWidth: 700 }}>
-        Aqui estão alguns certificados verificáveis que mostram parte da minha experiência em segurança e tecnologia.
+        Aqui estão alguns certificados verificáveis.
       </Typography>
 
       <Grid container spacing={3}>
